@@ -1,20 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import content from '$lib/content.json';
-
-	gsap.registerPlugin(ScrollTrigger);
 
 	const d = content.sections;
 
-	// Forzar scroll al top ANTES de que el DOM se pinte
 	if (typeof window !== 'undefined') {
 		window.history.scrollRestoration = 'manual';
 		window.scrollTo(0, 0);
 	}
 
-	onMount(() => {
+	onMount(async () => {
+		const { gsap } = await import('gsap');
+		const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+		gsap.registerPlugin(ScrollTrigger);
+
 		window.scrollTo(0, 0);
 		window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
 
