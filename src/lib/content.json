@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Aprende a Leer Etiquetas | Coach BattleBeast",
+    "author": "Osmar Gonzalez - Personal Trainer",
+    "brand": "Coach BattleBeast"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "title": "Deja de comer a ciegas.",
+      "subtitle": "Guia practica para leer etiquetas nutricionales y tomar el control de tu alimentacion.",
+      "badge": "Coach BattleBeast"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "tagline": "El problema",
+      "title": "El marketing te miente.",
+      "description": "Te venden supuestos alimentos \"saludables\" que si sabes leer la etiqueta, entenderias que muchas veces no son mejores que un M&M.",
+      "badges": ["Sin azucar", "Light", "Organico", "Gluten Free", "0 kcal", "Non GMO", "Bajo en sodio"]
+    },
+    {
+      "id": "philosophy",
+      "type": "insight",
+      "tagline": "La filosofia",
+      "title": "Nada esta prohibido.",
+      "description": "No trabajo eliminando o prohibiendo alimentos. La mayoria de lo que consumas debe ser sin procesar, minimamente procesado o buen procesado.",
+      "highlight": "Hay opciones mas nutritivas que debemos priorizar y aquellas que no lo sean, simplemente moderar su consumo. El consumo de ultraprocesados no deberia exceder mas del 20% de los alimentos que consumimos diariamente.",
+      "ratio": { "good": "80%", "goodLabel": "Nutritivo", "flex": "20%", "flexLabel": "Flexible" }
+    },
+    {
+      "id": "twokeys",
+      "type": "two-keys",
+      "tagline": "Al leer una etiqueta",
+      "title": "Dos puntos importantes.",
+      "items": [
+        {
+          "number": "01",
+          "name": "Lectura de ingredientes",
+          "detail": "Para que entiendas la calidad nutricional del producto y diferencies un buen procesado de un ultraprocesado."
+        },
+        {
+          "number": "02",
+          "name": "Etiquetado nutricional",
+          "detail": "Para que sepas cuantas porciones equivale de tu plan y cual es el principal macronutriente."
+        }
+      ]
+    },
+    {
+      "id": "ingredients",
+      "type": "ingredients",
+      "tagline": "Paso 1: Ingredientes",
+      "title": "Lee los ingredientes primero.",
+      "description": "Antes de enfocarte en porciones, porcentajes, calorias y gramos, enfocate primero en los ingredientes. Asi sabras identificar un alimento minimamente procesado o buen procesado de un ultraprocesado.",
+      "rules": [
+        {
+          "icon": "arrow-down",
+          "name": "De mas a menos",
+          "detail": "Los ingredientes van ordenados por cantidad. El primero es lo que mas contiene. Si compras chocolate y el primer ingrediente es azucar, eso es lo que mas tiene."
+        },
+        {
+          "icon": "list",
+          "name": "Pocos ingredientes",
+          "detail": "Un producto con pocos ingredientes generalmente es menos procesado. Compara un yogurt sin azucares anadidos con unos Doritos y veras la diferencia en cantidad de ingredientes."
+        },
+        {
+          "icon": "check",
+          "name": "Verifica lo integral",
+          "detail": "Si buscas galletas integrales y el primer ingrediente es 'harina de trigo', realmente NO es integral. Para que sea integral, el primer ingrediente debe ser 'harina o semola integral'."
+        }
+      ]
+    },
+    {
+      "id": "sugar",
+      "type": "reveal",
+      "tagline": "La trampa del azucar",
+      "title": "Azucar es azucar.",
+      "description": "Es mentira que una es mejor que la otra. Al final tienen el mismo impacto en nuestro organismo. Cuando compres un producto 'sin azucar', revisa que no tenga ninguno de estos nombres en los ingredientes:",
+      "hiddenNames": [
+        "Glucosa", "Jarabe de maiz alto en fructosa", "Fructosa", "Miel", "Sacarosa", "Maltosa",
+        "Agave", "Melaza", "Azucar morena", "Azucar de coco", "Azucar de cana",
+        "Papelon", "Panela", "Dextrosa", "Galactosa", "Jarabe de malta", "Maltodextrina"
+      ],
+      "count": "17",
+      "countLabel": "nombres ocultos del azucar",
+      "footnote": "Esto no significa que el azucar sea un veneno ni que debas eliminarla por completo. No es un alimento nutritivo, pero lo que mas importa es lo que consumes la mayor parte del tiempo. Solo evita dejarte enganar por productos 'mas saludables' que usan el mismo ingrediente que buscas evitar, solo que a mayor precio."
+    },
+    {
+      "id": "marketing",
+      "type": "grid",
+      "tagline": "Estrategias de marketing",
+      "title": "No te dejes enganar.",
+      "description": "Que un producto diga gluten free, non gmo, sin transgenicos, organico, bajo en sodio o light, no significa que realmente sea saludable.",
+      "items": [
+        {
+          "label": "Light",
+          "truth": "Un producto 'light' no significa libre de calorias. Solo significa que se redujo un 25-30% el valor energetico respecto al original.",
+          "warning": "Cuidado: las personas al leer 'light' terminan comiendo el doble o el triple en lugar de una porcion adecuada."
+        },
+        {
+          "label": "Sin gluten",
+          "truth": "El gluten es una proteina que se encuentra en algunos cereales. Las personas veganas usan gluten de trigo (seitan) como sustituto de carne por su valor proteico.",
+          "warning": "Solo debes priorizar alimentos sin gluten si eres celiaco, tienes sensibilidad o una condicion diagnosticada. Muchos productos sin gluten son igualmente ricos en grasas de mala calidad y azucares."
+        },
+        {
+          "label": "0 kcal",
+          "truth": "En teoria, un producto 'sin calorias' debe aportar menos de 4kcal en 100g. Pero segun la ley, si por porcion aporta menos de 5kcal, se puede declarar como '0' kcal.",
+          "warning": "Fabricantes usan porciones ridiculas: aceites en spray con porcion de 0.25g (1/4 de segundo) o edulcorantes con dextrosa (azucar) como primer ingrediente pero porcion de 1g."
+        },
+        {
+          "label": "Organico",
+          "truth": "Los productos organicos se cultivan sin pesticidas sinteticos ni organismos modificados. Pero la ciencia ha demostrado que no existe diferencia significativa en nutrientes vs. no organicos.",
+          "warning": "Los alimentos convencionales tambien siguen normas de seguridad. Lo mas importante no es si es organico, sino la calidad de los ingredientes."
+        }
+      ]
+    },
+    {
+      "id": "sodium",
+      "type": "sodium",
+      "tagline": "Ojo con el sodio",
+      "title": "Menos de 5g al dia.",
+      "description": "El sodio es esencial para nuestro organismo, pero la OMS recomienda menos de 5g al dia (aprox. 1 cucharadita de sal). Se estima que la poblacion en general excede esta recomendacion.",
+      "levels": [
+        { "label": "Sin sodio / Sodium free", "value": "< 5mg por porcion", "color": "#4CAF50" },
+        { "label": "Muy bajo en sodio", "value": "35mg o menos por porcion", "color": "#81C784" },
+        { "label": "Bajo en sodio", "value": "140mg o menos por porcion", "color": "#FF9800" },
+        { "label": "Reducido en sodio", "value": "25% menos que el original", "color": "#f44336" }
+      ],
+      "footnote": "Reducido en sodio NO significa que sea bajo en sodio, solo es 25% menos que el producto original. Si aporta mas, no esta prohibido, solo modera su consumo. Usa estos consejos con responsabilidad, sin irte a los extremos."
+    },
+    {
+      "id": "carbs",
+      "type": "carbs",
+      "tagline": "Carbohidratos totales",
+      "title": "No todos los carbos son iguales.",
+      "description": "Existen 3 tipos de carbohidratos: azucares, almidon y fibra. Cuando lees 'carbohidratos totales' es la cantidad de los 3 tipos, incluyendo polialcoholes si los tiene.",
+      "subsections": [
+        {
+          "name": "Azucares totales y anadidos",
+          "detail": "Los 'azucares totales' incluyen azucar natural y anadida. El azucar natural (como la lactosa del yogurt: 100g de yogurt natural tiene 12g de azucares totales por la lactosa) NO es lo mismo que el azucar anadida. Presta atencion a los gramos de azucar ANADIDA. Generalmente debajo de azucares totales veras 'de los cuales anadidos...' y ESA es la cifra importante.",
+          "rule": "< 5g de azucar anadida por porcion = bajo. > 15g = muy alto.",
+          "limit": "La OMS recomienda no consumir mas de 25g de azucares anadidos al dia. Los azucares naturales (lactosa, fructosa de fruta) NO se cuentan en esta recomendacion."
+        },
+        {
+          "name": "Fibra",
+          "detail": "Es un tipo de carbohidrato que no se digiere (o parcialmente). Cumple funciones importantes: mejora deposiciones, reduce colesterol, mantiene salud intestinal, controla azucar en sangre y mantiene la saciedad por mas tiempo. Se recomienda priorizar productos integrales porque tienen mayor cantidad de fibra aunque las calorias sean similares.",
+          "rule": "2 a 4.9g de fibra por porcion = buena fuente. Mas de 5g = alto contenido de fibra.",
+          "tip": "Cuando cuentes macros, resta la fibra del total de carbohidratos porque no se digiere."
+        },
+        {
+          "name": "Polialcoholes",
+          "detail": "Son sustitutos del azucar con menos calorias por gramo. El sorbitol, xilitol y manitol son ejemplos. No hay problema con ellos en general.",
+          "rule": "Solo se recomienda evitarlos en caso de algunas patologias, el mas comun es en personas con colon irritable."
+        }
+      ]
+    },
+    {
+      "id": "fats",
+      "type": "fats",
+      "tagline": "Grasa total",
+      "title": "La calidad importa mas que la cantidad.",
+      "description": "Existen varios tipos de grasa: monoinsaturadas, poliinsaturadas, saturadas y trans. Unas mas beneficiosas que otras. Lo mas importante con las grasas no es la cantidad sino la calidad.",
+      "good": ["Aceite de oliva", "Aceite de aguacate", "Mantequilla de mani", "Frutos secos"],
+      "bad": ["Grasa o aceite hidrogenado", "Grasa parcialmente hidrogenada", "Aceite de palma"],
+      "limits": [
+        { "type": "Trans", "limit": "< 0.5g por porcion", "color": "#f44336" },
+        { "type": "Saturada", "limit": "< 1g ideal / < 3g aceptable", "color": "#FF9800" }
+      ],
+      "footnote": "No pasa nada si lo consumes ocasionalmente, pero su consumo frecuente no es beneficioso para tu salud. Evita consumir alimentos que contengan grasas trans y productos muy elevados en grasas saturadas (mas de 3g por porcion)."
+    },
+    {
+      "id": "calories",
+      "type": "calories",
+      "tagline": "Las calorias",
+      "title": "No te fijes en las calorias.",
+      "description": "Aunque las calorias importen, nos importa mucho mas de DONDE vienen esas calorias (proteinas, carbos o grasas). De resto es un numero que no nos brinda informacion relevante. Pasa directo a la lectura de los macronutrientes."
+    },
+    {
+      "id": "macros",
+      "type": "macros",
+      "tagline": "Los macronutrientes",
+      "title": "Todos los alimentos tienen 3 macros.",
+      "description": "Carbohidratos (CHO), Proteinas (P) y Grasas (G). Los gramos totales de un alimento la mayoria del tiempo NO tienen nada que ver con la cantidad de macros.",
+      "detail": "¿Por que tienes libertad de escoger cualquier alimento de tu preferencia segun la lista? Porque a pesar de que las cantidades totales (gramos) son diferentes, en esas cantidades se encuentra la misma cantidad de macros.",
+      "example": "En 100g de papa hay aprox. 15g de carbohidrato y algo de proteina. En 70g de arroz tambien hay 15g de carbohidrato y algo de proteina. Estan agrupados segun la cantidad de macronutrientes que aportan."
+    },
+    {
+      "id": "portions",
+      "type": "portions",
+      "tagline": "Tu tabla de referencia",
+      "title": "Cada grupo, una porcion.",
+      "items": [
+        { "group": "Lacteos", "carbs": "12g", "protein": "8g", "fat": "0-3g", "color": "#E1BEE7", "note": "Depende si es descremada o no" },
+        { "group": "Frutas", "carbs": "15g", "protein": "—", "fat": "—", "color": "#C8E6C9", "note": "Solo carbohidratos" },
+        { "group": "Almidones", "carbs": "15g", "protein": "2-3g", "fat": "—", "color": "#FFE0B2", "note": "Aporta carbos + algo de proteina" },
+        { "group": "Proteinas", "carbs": "—", "protein": "7g", "fat": "3g", "color": "#BBDEFB", "note": "Proteina + algo de grasa" },
+        { "group": "Grasas", "carbs": "—", "protein": "—", "fat": "5g", "color": "#FFCCBC", "note": "Solo grasa" }
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "practice",
+      "tagline": "Ponlo en practica",
+      "title": "Siempre revisa el tamano de porcion.",
+      "description": "Seria un error suponer que la tabla nutricional indica el valor del contenido total. Por lo general esta en base a UNA porcion, y cada porcion sera diferente en cada producto segun lo que le convenga a cada fabricante.",
+      "example": {
+        "serving": "2/3 cup (55g)",
+        "servings": "8 por empaque",
+        "calories": 230,
+        "fat": "8g",
+        "carbs": "37g",
+        "fiber": "4g",
+        "sugars": "12g",
+        "addedSugars": "10g",
+        "protein": "3g",
+        "calculation": {
+          "totalCarbs": 37,
+          "fiber": 4,
+          "netCarbs": 33,
+          "steps": [
+            "Restar fibra: 37g - 4g = 33g de carbohidrato digerible",
+            "Opciones de intercambio: 2 almidones (15g+15g=30g), 2 frutas (15g+15g=30g), o 1 almidon + 1 fruta (15g+15g=30g)",
+            "Lo importante es aproximar a un numero cercano, NO es obligatorio cubrir todos los gramos exactos",
+            "Proteina: el producto aporta 3g. Si usas 1 porcion de almidon, ya cubre 3g de proteina, asi que las proteinas estarian cubiertas",
+            "Grasa: 8g = 1.5 porciones de grasa (5g + 2.5g = 7.5g)"
+          ],
+          "result": "2 porciones de almidones + 1.5 porciones de grasa. Las proteinas las cubre el almidon."
+        }
+      }
+    },
+    {
+      "id": "closing",
+      "type": "closing",
+      "title": "No te obsesiones.",
+      "description": "La practica constante permite dominarlo progresivamente. Puedes escribirme durante tu asesoria para que practiquemos juntos.",
+      "highlight": "La mayoria de alimentos que consumo diariamente son sin procesar. Cuando ya no estes dentro de tu plan, sigue priorizando estos alimentos. Y cuando consumas un chocolate, una chucheria o lo que sea, disfrutalo sin preocuparte por las porciones.",
+      "cta": "No hay alimentos malos o buenos. Hay malos y buenos patrones de alimentacion. Lo que tiene peso es lo que haces la mayoria del tiempo.",
+      "author": "Osmar Gonzalez",
+      "role": "Personal Trainer | Coach BattleBeast"
+    }
+  ]
+}
