@@ -29,19 +29,9 @@
 		gsap.to('.hero-logo', { y: -15, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut' });
 
 		// === PINNED SECTION HELPER ===
-		const isMobile = window.matchMedia('(max-width: 767px)').matches;
-
-		function pin(id: string, end: string, fn: (t: gsap.core.Timeline) => void, disablePinOnMobile = false) {
-			const shouldPin = !(disablePinOnMobile && isMobile);
+		function pin(id: string, end: string, fn: (t: gsap.core.Timeline) => void) {
 			const t = gsap.timeline({
-				scrollTrigger: {
-					trigger: `#${id}`,
-					start: shouldPin ? 'top top' : 'top 80%',
-					end: shouldPin ? `+=${end}` : 'bottom 20%',
-					pin: shouldPin,
-					scrub: 1,
-					anticipatePin: shouldPin ? 1 : 0
-				}
+				scrollTrigger: { trigger: `#${id}`, start: 'top top', end: `+=${end}`, pin: true, scrub: 1, anticipatePin: 1 }
 			});
 			fn(t);
 			t.to({}, { duration: 0.5 });
@@ -106,7 +96,7 @@
 			 .from('.mk-ttl', { autoAlpha: 0, y: 80, duration: 0.6 }, 0.1)
 			 .from('.mk-img', { autoAlpha: 0, scale: 0.7, duration: 0.7 }, 0.15)
 			 .from('.mk-cd', { autoAlpha: 0, y: 60, stagger: 0.1, duration: 0.5 }, 0.4);
-		}, true);
+		});
 
 		// === SODIUM ===
 		pin('sodium', '200%', t => {
@@ -126,7 +116,7 @@
 			 .from('.cb-b0', { autoAlpha: 0, y: 60, duration: 0.5 }, 0.5)
 			 .from('.cb-b1', { autoAlpha: 0, y: 60, duration: 0.5 }, 0.8)
 			 .from('.cb-b2', { autoAlpha: 0, y: 60, duration: 0.5 }, 1.1);
-		}, true);
+		});
 
 		// === FATS ===
 		pin('fats', '250%', t => {
@@ -296,18 +286,18 @@
 </section>
 
 <!-- MARKETING -->
-<section id="marketing" class="flex min-h-screen items-center justify-center px-4 py-16 sm:px-6 md:h-screen md:min-h-0 md:overflow-hidden md:py-0">
-	<div class="max-w-5xl text-center">
+<section id="marketing" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
+	<div class="max-h-[90vh] max-w-5xl overflow-y-auto text-center scrollbar-hide md:max-h-none md:overflow-visible">
 		<span class="mk-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[6].tagline}</span>
 		<h2 class="mk-ttl text-2xl font-bold text-white sm:text-3xl md:text-5xl">{d[6].title}</h2>
-		<p class="mt-2 text-xs text-white/40 sm:mt-3 sm:text-sm md:text-base">{d[6].description}</p>
-		<img src="/images/marketing.jpg" alt="" class="mk-img mx-auto mt-3 hidden h-28 w-full max-w-xl rounded-2xl object-cover shadow-2xl shadow-black/50 sm:mt-6 sm:block sm:h-40" />
-		<div class="mt-4 grid w-full grid-cols-1 gap-2.5 sm:mt-8 sm:grid-cols-2 sm:gap-4">
+		<p class="mt-1.5 text-[11px] text-white/40 sm:mt-3 sm:text-sm md:text-base">{d[6].description}</p>
+		<img src="/images/marketing.jpg" alt="" class="mk-img mx-auto mt-3 hidden w-full max-w-xl rounded-2xl object-cover shadow-2xl shadow-black/50 sm:mt-6 sm:block sm:h-40" />
+		<div class="mt-3 grid w-full grid-cols-2 gap-2 sm:mt-8 sm:gap-4">
 			{#each d[6].items as item}
-				<div class="mk-cd rounded-xl border border-white/5 bg-white/[0.03] p-3 text-left transition-colors hover:border-[#4CAF50]/20 hover:bg-white/[0.05] sm:p-4 md:p-6">
-					<span class="mb-1 inline-block rounded-md bg-[#4CAF50]/10 px-2 py-0.5 text-[10px] font-bold tracking-wider text-[#4CAF50] uppercase sm:mb-2 sm:px-3 sm:py-1 sm:text-xs">{item.label}</span>
-					<p class="text-[11px] leading-relaxed text-white/50 sm:text-xs md:text-sm">{item.truth}</p>
-					<p class="mt-1 border-t border-white/5 pt-1 text-[10px] text-[#FF9800]/50 sm:mt-2 sm:pt-2 sm:text-xs">{item.warning}</p>
+				<div class="mk-cd rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-left transition-colors hover:border-[#4CAF50]/20 hover:bg-white/[0.05] sm:p-4 md:p-6">
+					<span class="mb-1 inline-block rounded-md bg-[#4CAF50]/10 px-2 py-0.5 text-[9px] font-bold tracking-wider text-[#4CAF50] uppercase sm:mb-2 sm:px-3 sm:py-1 sm:text-xs">{item.label}</span>
+					<p class="text-[10px] leading-snug text-white/50 sm:text-xs md:text-sm">{item.truth}</p>
+					<p class="mt-1 border-t border-white/5 pt-1 text-[9px] text-[#FF9800]/50 sm:mt-2 sm:pt-2 sm:text-xs">{item.warning}</p>
 				</div>
 			{/each}
 		</div>
@@ -331,19 +321,19 @@
 </section>
 
 <!-- CARBS -->
-<section id="carbs" class="flex min-h-screen items-center justify-center px-4 py-16 sm:px-6 md:h-screen md:min-h-0 md:overflow-hidden md:py-0">
-	<div class="max-w-3xl text-center">
+<section id="carbs" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
+	<div class="max-h-[90vh] max-w-3xl overflow-y-auto text-center scrollbar-hide md:max-h-none md:overflow-visible">
 		<span class="cb-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[8].tagline}</span>
 		<h2 class="cb-ttl text-2xl font-bold text-white sm:text-3xl md:text-5xl">{d[8].title}</h2>
-		<p class="cb-dsc mt-2 text-xs text-white/40 sm:mt-4 sm:text-sm md:text-base">{d[8].description}</p>
-		<div class="mt-3 flex w-full flex-col gap-2 sm:mt-8 sm:gap-4">
+		<p class="cb-dsc mt-1.5 text-[11px] text-white/40 sm:mt-4 sm:text-sm md:text-base">{d[8].description}</p>
+		<div class="mt-2.5 flex w-full flex-col gap-2 sm:mt-8 sm:gap-4">
 			{#each d[8].subsections as sub, i}
-				<div class="cb-b{i} rounded-xl border border-white/5 bg-white/[0.03] p-3 text-left sm:p-5">
+				<div class="cb-b{i} rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-left sm:p-5">
 					<h3 class="text-xs font-semibold text-white sm:text-sm md:text-base">{sub.name}</h3>
-					<p class="mt-0.5 text-[11px] leading-relaxed text-white/40 sm:mt-1.5 sm:text-xs md:text-sm">{sub.detail}</p>
-					<div class="mt-1.5 rounded-lg bg-[#4CAF50]/5 px-2.5 py-1 sm:mt-3 sm:px-4 sm:py-2"><p class="text-[11px] font-medium text-[#4CAF50] sm:text-xs md:text-sm">{sub.rule}</p></div>
-					{#if sub.limit}<p class="mt-1 text-[10px] leading-snug text-[#FF9800]/50 sm:mt-2 sm:text-xs">{sub.limit}</p>{/if}
-					{#if sub.tip}<p class="mt-0.5 text-[10px] leading-snug text-[#2196F3]/50 sm:mt-1.5 sm:text-xs">Tip: {sub.tip}</p>{/if}
+					<p class="mt-0.5 text-[10px] leading-snug text-white/40 sm:mt-1.5 sm:text-xs md:text-sm">{sub.detail}</p>
+					<div class="mt-1 rounded-lg bg-[#4CAF50]/5 px-2 py-1 sm:mt-3 sm:px-4 sm:py-2"><p class="text-[10px] font-medium text-[#4CAF50] sm:text-xs md:text-sm">{sub.rule}</p></div>
+					{#if sub.limit}<p class="mt-0.5 text-[9px] leading-snug text-[#FF9800]/50 sm:mt-2 sm:text-xs">{sub.limit}</p>{/if}
+					{#if sub.tip}<p class="mt-0.5 text-[9px] leading-snug text-[#2196F3]/50 sm:mt-1.5 sm:text-xs">Tip: {sub.tip}</p>{/if}
 				</div>
 			{/each}
 		</div>
