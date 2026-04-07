@@ -8,7 +8,7 @@
   --color-dark-card: #111111;
   --color-dark-soft: #1a1a1a;
   --color-gray-accent: #888888;
-  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: system-ui, -apple-system, sans-serif;
 }
 
 html {

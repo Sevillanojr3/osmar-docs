@@ -183,7 +183,7 @@
 <section id="hero" class="relative flex h-screen flex-col items-center justify-center overflow-hidden px-4 sm:px-6">
 	<!-- global bg from css -->
 	<div class="pointer-events-none absolute inset-0"><div class="absolute top-1/4 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4CAF50]/10 blur-[160px]"></div></div>
-	<img src="/images/logo-sm.png" alt="Coach BattleBeast" class="hero-logo mb-4 h-28 w-auto rounded-2xl object-contain sm:mb-6 sm:h-40 md:h-52" />
+	<img src="/images/logo-sm.webp" alt="Coach BattleBeast" class="hero-logo mb-4 h-28 w-auto rounded-2xl object-contain sm:mb-6 sm:h-40 md:h-52" />
 	<span class="hero-badge mb-4 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium tracking-[0.2em] text-[#81C784] uppercase sm:mb-6 sm:px-6 sm:py-2.5 sm:text-sm">{d[0].badge}</span>
 	<h1 class="hero-title max-w-5xl text-center text-4xl leading-[1.05] font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
 		{#each d[0].title.split(' ') as w}<span class="word inline-block">{w}&nbsp;</span>{/each}
@@ -195,7 +195,7 @@
 <!-- PROBLEM -->
 <section id="problem" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="flex max-w-6xl flex-col items-center gap-6 sm:gap-10 md:flex-row">
-		<img src="/images/problem.jpg" alt="" class="p-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-64 sm:w-64 md:h-80 md:w-80" />
+		<img src="/images/problem.webp" loading="lazy" decoding="async" alt="" class="p-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-64 sm:w-64 md:h-80 md:w-80" />
 		<div class="text-center md:text-left">
 			<span class="p-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[1].tagline}</span>
 			<h2 class="p-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">{d[1].title}</h2>
@@ -210,7 +210,7 @@
 <!-- PHILOSOPHY -->
 <section id="philosophy" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="flex max-w-6xl flex-col items-center gap-6 sm:gap-10 md:flex-row-reverse">
-		<img src="/images/philosophy.jpg" alt="" class="ph-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-64 sm:w-64 md:h-80 md:w-80" />
+		<img src="/images/philosophy.webp" loading="lazy" decoding="async" alt="" class="ph-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-64 sm:w-64 md:h-80 md:w-80" />
 		<div class="text-center md:text-left">
 			<span class="ph-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[2].tagline}</span>
 			<h2 class="ph-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">{d[2].title}</h2>
@@ -247,7 +247,7 @@
 	<div class="flex max-w-6xl flex-col items-center gap-5 sm:gap-8 md:flex-row">
 		<div class="flex flex-shrink-0 flex-col items-center">
 			<div class="in-step mb-3 flex h-14 w-14 items-center justify-center rounded-xl border border-[#4CAF50]/20 bg-[#4CAF50]/8 text-2xl font-black text-[#4CAF50] sm:mb-4 sm:h-20 sm:w-20 sm:rounded-2xl sm:text-3xl">01</div>
-			<img src="/images/ingredients.jpg" alt="" class="in-img h-36 w-36 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-52 sm:w-52 md:h-72 md:w-72" />
+			<img src="/images/ingredients.webp" loading="lazy" decoding="async" alt="" class="in-img h-36 w-36 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-52 sm:w-52 md:h-72 md:w-72" />
 		</div>
 		<div class="text-center md:text-left">
 			<h2 class="in-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[4].title}</h2>
@@ -275,7 +275,7 @@
 		<span class="su-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-red-400 uppercase sm:mb-3">{d[5].tagline}</span>
 		<h2 class="su-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">{d[5].title}</h2>
 		<p class="su-dsc mx-auto mt-2 max-w-2xl text-sm text-white/40 sm:mt-4 sm:text-base">{d[5].description}</p>
-		<img src="/images/sugar.jpg" alt="" class="su-img mx-auto mt-4 h-28 w-28 rounded-2xl object-cover shadow-2xl shadow-red-900/30 sm:mt-6 sm:h-40 sm:w-40 md:h-48 md:w-48" />
+		<img src="/images/sugar.webp" loading="lazy" decoding="async" alt="" class="su-img mx-auto mt-4 h-28 w-28 rounded-2xl object-cover shadow-2xl shadow-red-900/30 sm:mt-6 sm:h-40 sm:w-40 md:h-48 md:w-48" />
 		<span class="su-cnt mt-2 block text-6xl font-black text-red-400 tabular-nums sm:mt-4 sm:text-8xl md:text-9xl">0</span>
 		<span class="text-xs tracking-wider text-white/30 uppercase sm:text-sm">{d[5].countLabel}</span>
 		<div class="mx-auto mt-4 flex max-w-2xl flex-wrap justify-center gap-1.5 sm:mt-6 sm:gap-2">
@@ -291,7 +291,7 @@
 		<span class="mk-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[6].tagline}</span>
 		<h2 class="mk-ttl text-2xl font-bold text-white sm:text-3xl md:text-5xl">{d[6].title}</h2>
 		<p class="mt-1.5 text-[11px] text-white/40 sm:mt-3 sm:text-sm md:text-base">{d[6].description}</p>
-		<img src="/images/marketing.jpg" alt="" class="mk-img mx-auto mt-3 hidden w-full max-w-xl rounded-2xl object-cover shadow-2xl shadow-black/50 sm:mt-6 sm:block sm:h-40" />
+		<img src="/images/marketing.webp" loading="lazy" decoding="async" alt="" class="mk-img mx-auto mt-3 hidden w-full max-w-xl rounded-2xl object-cover shadow-2xl shadow-black/50 sm:mt-6 sm:block sm:h-40" />
 		<div class="mt-3 grid w-full grid-cols-2 gap-2 sm:mt-8 sm:gap-4">
 			{#each d[6].items as item}
 				<div class="mk-cd rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-left transition-colors hover:border-[#4CAF50]/20 hover:bg-white/[0.05] sm:p-4 md:p-6">
@@ -375,7 +375,7 @@
 <!-- MACROS -->
 <section id="macros" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="flex max-w-6xl flex-col items-center gap-5 sm:gap-8 md:flex-row">
-		<img src="/images/macros.jpg" alt="" class="ma-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-60 sm:w-60 md:h-80 md:w-80" />
+		<img src="/images/macros.webp" loading="lazy" decoding="async" alt="" class="ma-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-60 sm:w-60 md:h-80 md:w-80" />
 		<div class="text-center md:text-left">
 			<span class="ma-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[11].tagline}</span>
 			<h2 class="ma-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[11].title}</h2>
@@ -389,7 +389,7 @@
 <!-- PORTIONS -->
 <section id="portions" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="flex max-w-6xl flex-col items-center gap-5 sm:gap-8 md:flex-row-reverse">
-		<img src="/images/portions.jpg" alt="" class="po-img h-36 w-36 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-56 sm:w-56 md:h-72 md:w-72" />
+		<img src="/images/portions.webp" loading="lazy" decoding="async" alt="" class="po-img h-36 w-36 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-56 sm:w-56 md:h-72 md:w-72" />
 		<div class="w-full max-w-xl">
 			<span class="po-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[12].tagline}</span>
 			<h2 class="po-ttl mb-4 text-3xl font-bold text-white sm:mb-8 sm:text-4xl md:text-5xl">{d[12].title}</h2>
@@ -443,7 +443,7 @@
 	<!-- bg from layout -->
 	<div class="pointer-events-none absolute inset-0"><div class="absolute top-1/2 left-1/2 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4CAF50]/5 blur-[180px]"></div></div>
 	<div class="max-w-4xl text-center">
-		<img src="/images/logo-sm.png" alt="Coach BattleBeast" class="cl-logo mx-auto mb-5 h-24 w-auto rounded-xl object-contain sm:mb-8 sm:h-32 md:h-40" />
+		<img src="/images/logo-sm.webp" alt="Coach BattleBeast" class="cl-logo mx-auto mb-5 h-24 w-auto rounded-xl object-contain sm:mb-8 sm:h-32 md:h-40" />
 		<h2 class="cl-ttl text-3xl font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl">{d[14].title}</h2>
 		<p class="cl-dsc mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/40 sm:mt-6 sm:text-lg">{d[14].description}</p>
 		<p class="cl-hi mx-auto mt-3 max-w-lg text-sm leading-relaxed text-white/50 italic sm:mt-5 sm:text-base">"{d[14].highlight}"</p>
