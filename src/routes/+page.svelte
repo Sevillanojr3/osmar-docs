@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import content from '$lib/content.json';
 
 	const d = content.sections;
@@ -9,9 +11,7 @@
 		window.scrollTo(0, 0);
 	}
 
-	onMount(async () => {
-		const { gsap } = await import('gsap');
-		const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
 		window.scrollTo(0, 0);
