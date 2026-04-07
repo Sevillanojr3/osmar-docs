@@ -180,62 +180,62 @@
 <svelte:head><title>{content.meta.title}</title></svelte:head>
 
 <!-- HERO -->
-<section id="hero" class="relative flex h-screen flex-col items-center justify-center overflow-hidden px-6">
+<section id="hero" class="relative flex h-screen flex-col items-center justify-center overflow-hidden px-4 sm:px-6">
 	<!-- global bg from css -->
 	<div class="pointer-events-none absolute inset-0"><div class="absolute top-1/4 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4CAF50]/10 blur-[160px]"></div></div>
-	<img src="/images/logo-sm.png" alt="Coach BattleBeast" class="hero-logo mb-6 h-40 w-auto rounded-2xl object-contain sm:h-52" />
-	<span class="hero-badge mb-6 rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-sm font-medium tracking-[0.2em] text-[#81C784] uppercase">{d[0].badge}</span>
-	<h1 class="hero-title max-w-5xl text-center text-5xl leading-[1.05] font-extrabold tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
+	<img src="/images/logo-sm.png" alt="Coach BattleBeast" class="hero-logo mb-4 h-28 w-auto rounded-2xl object-contain sm:mb-6 sm:h-40 md:h-52" />
+	<span class="hero-badge mb-4 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium tracking-[0.2em] text-[#81C784] uppercase sm:mb-6 sm:px-6 sm:py-2.5 sm:text-sm">{d[0].badge}</span>
+	<h1 class="hero-title max-w-5xl text-center text-4xl leading-[1.05] font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
 		{#each d[0].title.split(' ') as w}<span class="word inline-block">{w}&nbsp;</span>{/each}
 	</h1>
-	<p class="hero-sub mt-8 max-w-xl text-center text-xl leading-relaxed text-white/40">{d[0].subtitle}</p>
-	<div class="hero-scroll mt-16 flex flex-col items-center gap-2 text-white/20"><span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span><svg class="h-5 w-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg></div>
+	<p class="hero-sub mt-4 max-w-xl text-center text-base leading-relaxed text-white/40 sm:mt-8 sm:text-xl">{d[0].subtitle}</p>
+	<div class="hero-scroll mt-8 flex flex-col items-center gap-2 text-white/20 sm:mt-16"><span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span><svg class="h-5 w-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg></div>
 </section>
 
 <!-- PROBLEM -->
-<section id="problem" class="flex h-screen items-center justify-center overflow-hidden px-6">
-	<div class="flex max-w-6xl flex-col items-center gap-10 md:flex-row">
-		<img src="/images/problem.jpg" alt="" class="p-img h-64 w-64 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-80 sm:w-80" />
+<section id="problem" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
+	<div class="flex max-w-6xl flex-col items-center gap-6 sm:gap-10 md:flex-row">
+		<img src="/images/problem.jpg" alt="" class="p-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-64 sm:w-64 md:h-80 md:w-80" />
 		<div class="text-center md:text-left">
-			<span class="p-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[1].tagline}</span>
-			<h2 class="p-ttl text-4xl font-bold text-white sm:text-5xl md:text-6xl">{d[1].title}</h2>
-			<p class="p-dsc mt-5 max-w-lg text-lg leading-relaxed text-white/40">{d[1].description}</p>
-			<div class="mt-6 flex flex-wrap gap-2.5 md:justify-start justify-center">
-				{#each d[1].badges as b}<span class="p-bdg rounded-full border border-red-500/20 bg-red-500/8 px-4 py-2 text-sm text-red-400/80">{b}</span>{/each}
+			<span class="p-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[1].tagline}</span>
+			<h2 class="p-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">{d[1].title}</h2>
+			<p class="p-dsc mt-3 max-w-lg text-base leading-relaxed text-white/40 sm:mt-5 sm:text-lg">{d[1].description}</p>
+			<div class="mt-4 flex flex-wrap justify-center gap-2 sm:mt-6 sm:gap-2.5 md:justify-start">
+				{#each d[1].badges as b}<span class="p-bdg rounded-full border border-red-500/20 bg-red-500/8 px-3 py-1.5 text-xs text-red-400/80 sm:px-4 sm:py-2 sm:text-sm">{b}</span>{/each}
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- PHILOSOPHY -->
-<section id="philosophy" class="flex h-screen items-center justify-center overflow-hidden px-6">
-	<div class="flex max-w-6xl flex-col items-center gap-10 md:flex-row-reverse">
-		<img src="/images/philosophy.jpg" alt="" class="ph-img h-64 w-64 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-80 sm:w-80" />
+<section id="philosophy" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
+	<div class="flex max-w-6xl flex-col items-center gap-6 sm:gap-10 md:flex-row-reverse">
+		<img src="/images/philosophy.jpg" alt="" class="ph-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-64 sm:w-64 md:h-80 md:w-80" />
 		<div class="text-center md:text-left">
-			<span class="ph-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[2].tagline}</span>
-			<h2 class="ph-ttl text-4xl font-bold text-white sm:text-5xl md:text-6xl">{d[2].title}</h2>
-			<p class="ph-dsc mt-4 max-w-lg text-lg leading-relaxed text-white/40">{d[2].description}</p>
-			<p class="ph-hi mt-4 rounded-xl border border-[#4CAF50]/10 bg-[#4CAF50]/5 px-5 py-4 text-sm leading-relaxed text-[#81C784]">{d[2].highlight}</p>
-			<div class="mt-8 flex items-center gap-8 md:justify-start justify-center">
-				<div class="ph-l flex flex-col items-center"><span class="text-5xl font-black text-[#4CAF50] sm:text-6xl">80%</span><span class="text-xs text-white/30 uppercase">Nutritivo</span></div>
-				<div class="h-14 w-px bg-white/10"></div>
-				<div class="ph-r flex flex-col items-center"><span class="text-5xl font-black text-[#FF9800] sm:text-6xl">20%</span><span class="text-xs text-white/30 uppercase">Flexible</span></div>
+			<span class="ph-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[2].tagline}</span>
+			<h2 class="ph-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">{d[2].title}</h2>
+			<p class="ph-dsc mt-3 max-w-lg text-base leading-relaxed text-white/40 sm:mt-4 sm:text-lg">{d[2].description}</p>
+			<p class="ph-hi mt-3 rounded-xl border border-[#4CAF50]/10 bg-[#4CAF50]/5 px-4 py-3 text-xs leading-relaxed text-[#81C784] sm:mt-4 sm:px-5 sm:py-4 sm:text-sm">{d[2].highlight}</p>
+			<div class="mt-5 flex items-center justify-center gap-6 sm:mt-8 sm:gap-8 md:justify-start">
+				<div class="ph-l flex flex-col items-center"><span class="text-4xl font-black text-[#4CAF50] sm:text-5xl md:text-6xl">80%</span><span class="text-[10px] text-white/30 uppercase sm:text-xs">Nutritivo</span></div>
+				<div class="h-10 w-px bg-white/10 sm:h-14"></div>
+				<div class="ph-r flex flex-col items-center"><span class="text-4xl font-black text-[#FF9800] sm:text-5xl md:text-6xl">20%</span><span class="text-[10px] text-white/30 uppercase sm:text-xs">Flexible</span></div>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- TWO KEYS -->
-<section id="twokeys" class="flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="twokeys" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="max-w-4xl text-center">
-		<span class="tk-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[3].tagline}</span>
-		<h2 class="tk-ttl mb-12 text-4xl font-bold text-white sm:text-5xl md:text-6xl">{d[3].title}</h2>
-		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+		<span class="tk-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[3].tagline}</span>
+		<h2 class="tk-ttl mb-6 text-3xl font-bold text-white sm:mb-12 sm:text-4xl md:text-5xl lg:text-6xl">{d[3].title}</h2>
+		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
 			{#each d[3].items as item}
-				<div class="tk-card rounded-2xl border border-white/5 bg-white/[0.03] p-8 text-left">
-					<span class="mb-3 block text-5xl font-black text-[#4CAF50]/25">{item.number}</span>
-					<h3 class="text-xl font-semibold text-white">{item.name}</h3>
-					<p class="mt-2 text-base leading-relaxed text-white/40">{item.detail}</p>
+				<div class="tk-card rounded-2xl border border-white/5 bg-white/[0.03] p-5 text-left sm:p-8">
+					<span class="mb-2 block text-4xl font-black text-[#4CAF50]/25 sm:mb-3 sm:text-5xl">{item.number}</span>
+					<h3 class="text-lg font-semibold text-white sm:text-xl">{item.name}</h3>
+					<p class="mt-1.5 text-sm leading-relaxed text-white/40 sm:mt-2 sm:text-base">{item.detail}</p>
 				</div>
 			{/each}
 		</div>
@@ -243,24 +243,24 @@
 </section>
 
 <!-- INGREDIENTS -->
-<section id="ingredients" class="flex h-screen items-center justify-center overflow-hidden px-6">
-	<div class="flex max-w-6xl flex-col items-center gap-8 md:flex-row">
+<section id="ingredients" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
+	<div class="flex max-w-6xl flex-col items-center gap-5 sm:gap-8 md:flex-row">
 		<div class="flex flex-shrink-0 flex-col items-center">
-			<div class="in-step mb-4 flex h-20 w-20 items-center justify-center rounded-2xl border border-[#4CAF50]/20 bg-[#4CAF50]/8 text-3xl font-black text-[#4CAF50]">01</div>
-			<img src="/images/ingredients.jpg" alt="" class="in-img h-52 w-52 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-72 sm:w-72" />
+			<div class="in-step mb-3 flex h-14 w-14 items-center justify-center rounded-xl border border-[#4CAF50]/20 bg-[#4CAF50]/8 text-2xl font-black text-[#4CAF50] sm:mb-4 sm:h-20 sm:w-20 sm:rounded-2xl sm:text-3xl">01</div>
+			<img src="/images/ingredients.jpg" alt="" class="in-img h-36 w-36 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-52 sm:w-52 md:h-72 md:w-72" />
 		</div>
 		<div class="text-center md:text-left">
-			<h2 class="in-ttl text-4xl font-bold text-white sm:text-5xl">{d[4].title}</h2>
-			<p class="in-dsc mt-4 max-w-lg text-base leading-relaxed text-white/40">{d[4].description}</p>
-			<div class="mt-6 flex flex-col gap-3">
+			<h2 class="in-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[4].title}</h2>
+			<p class="in-dsc mt-2 max-w-lg text-sm leading-relaxed text-white/40 sm:mt-4 sm:text-base">{d[4].description}</p>
+			<div class="mt-4 flex flex-col gap-2 sm:mt-6 sm:gap-3">
 				{#each d[4].rules as rule, i}
-					<div class="in-r{i} flex items-start gap-4 rounded-xl border border-white/5 bg-white/[0.03] p-5 text-left">
-						<div class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#4CAF50]/10">
-							<svg class="h-4 w-4 text-[#4CAF50]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+					<div class="in-r{i} flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] p-3 text-left sm:gap-4 sm:p-5">
+						<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#4CAF50]/10 sm:h-9 sm:w-9">
+							<svg class="h-3.5 w-3.5 text-[#4CAF50] sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
 								{#if rule.icon==='arrow-down'}<path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>{:else if rule.icon==='list'}<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h8m-8 6h16"/>{:else}<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>{/if}
 							</svg>
 						</div>
-						<div><h3 class="font-semibold text-white">{rule.name}</h3><p class="mt-1 text-sm leading-relaxed text-white/40">{rule.detail}</p></div>
+						<div><h3 class="text-sm font-semibold text-white sm:text-base">{rule.name}</h3><p class="mt-0.5 text-xs leading-relaxed text-white/40 sm:mt-1 sm:text-sm">{rule.detail}</p></div>
 					</div>
 				{/each}
 			</div>
@@ -269,35 +269,35 @@
 </section>
 
 <!-- SUGAR -->
-<section id="sugar" class="relative flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="sugar" class="relative flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="pointer-events-none absolute inset-0"><div class="absolute top-1/2 left-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/6 blur-[150px]"></div></div>
 	<div class="max-w-5xl text-center">
-		<span class="su-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-red-400 uppercase">{d[5].tagline}</span>
-		<h2 class="su-ttl text-4xl font-bold text-white sm:text-5xl md:text-6xl">{d[5].title}</h2>
-		<p class="su-dsc mt-4 max-w-2xl mx-auto text-base text-white/40">{d[5].description}</p>
-		<img src="/images/sugar.jpg" alt="" class="su-img mx-auto mt-6 h-40 w-40 rounded-2xl object-cover shadow-2xl shadow-red-900/30 sm:h-48 sm:w-48" />
-		<span class="su-cnt mt-4 block text-8xl font-black text-red-400 tabular-nums sm:text-9xl">0</span>
-		<span class="text-sm tracking-wider text-white/30 uppercase">{d[5].countLabel}</span>
-		<div class="mt-6 flex max-w-2xl mx-auto flex-wrap justify-center gap-2">
-			{#each d[5].hiddenNames as n}<span class="su-pill rounded-full border border-red-500/15 bg-red-500/8 px-3 py-1.5 text-xs text-red-400/70">{n}</span>{/each}
+		<span class="su-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-red-400 uppercase sm:mb-3">{d[5].tagline}</span>
+		<h2 class="su-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">{d[5].title}</h2>
+		<p class="su-dsc mx-auto mt-2 max-w-2xl text-sm text-white/40 sm:mt-4 sm:text-base">{d[5].description}</p>
+		<img src="/images/sugar.jpg" alt="" class="su-img mx-auto mt-4 h-28 w-28 rounded-2xl object-cover shadow-2xl shadow-red-900/30 sm:mt-6 sm:h-40 sm:w-40 md:h-48 md:w-48" />
+		<span class="su-cnt mt-2 block text-6xl font-black text-red-400 tabular-nums sm:mt-4 sm:text-8xl md:text-9xl">0</span>
+		<span class="text-xs tracking-wider text-white/30 uppercase sm:text-sm">{d[5].countLabel}</span>
+		<div class="mx-auto mt-4 flex max-w-2xl flex-wrap justify-center gap-1.5 sm:mt-6 sm:gap-2">
+			{#each d[5].hiddenNames as n}<span class="su-pill rounded-full border border-red-500/15 bg-red-500/8 px-2.5 py-1 text-[10px] text-red-400/70 sm:px-3 sm:py-1.5 sm:text-xs">{n}</span>{/each}
 		</div>
-		<p class="su-fn mt-6 max-w-lg mx-auto text-xs text-white/20 italic leading-relaxed">{d[5].footnote}</p>
+		<p class="su-fn mx-auto mt-4 max-w-lg text-[10px] text-white/20 italic leading-relaxed sm:mt-6 sm:text-xs">{d[5].footnote}</p>
 	</div>
 </section>
 
 <!-- MARKETING -->
-<section id="marketing" class="flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="marketing" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="max-w-5xl text-center">
-		<span class="mk-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[6].tagline}</span>
-		<h2 class="mk-ttl text-4xl font-bold text-white sm:text-5xl">{d[6].title}</h2>
-		<p class="mt-3 text-base text-white/40">{d[6].description}</p>
-		<img src="/images/marketing.jpg" alt="" class="mk-img mx-auto mt-6 h-40 w-full max-w-xl rounded-2xl object-cover shadow-2xl shadow-black/50" />
-		<div class="mt-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+		<span class="mk-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[6].tagline}</span>
+		<h2 class="mk-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[6].title}</h2>
+		<p class="mt-2 text-sm text-white/40 sm:mt-3 sm:text-base">{d[6].description}</p>
+		<img src="/images/marketing.jpg" alt="" class="mk-img mx-auto mt-4 h-28 w-full max-w-xl rounded-2xl object-cover shadow-2xl shadow-black/50 sm:mt-6 sm:h-40" />
+		<div class="mt-4 grid w-full grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
 			{#each d[6].items as item}
-				<div class="mk-cd rounded-xl border border-white/5 bg-white/[0.03] p-6 text-left transition-colors hover:border-[#4CAF50]/20 hover:bg-white/[0.05]">
-					<span class="mb-2 inline-block rounded-md bg-[#4CAF50]/10 px-3 py-1 text-xs font-bold tracking-wider text-[#4CAF50] uppercase">{item.label}</span>
-					<p class="text-sm leading-relaxed text-white/50">{item.truth}</p>
-					<p class="mt-2 border-t border-white/5 pt-2 text-xs text-[#FF9800]/50">{item.warning}</p>
+				<div class="mk-cd rounded-xl border border-white/5 bg-white/[0.03] p-4 text-left transition-colors hover:border-[#4CAF50]/20 hover:bg-white/[0.05] sm:p-6">
+					<span class="mb-1.5 inline-block rounded-md bg-[#4CAF50]/10 px-2.5 py-0.5 text-[10px] font-bold tracking-wider text-[#4CAF50] uppercase sm:mb-2 sm:px-3 sm:py-1 sm:text-xs">{item.label}</span>
+					<p class="text-xs leading-relaxed text-white/50 sm:text-sm">{item.truth}</p>
+					<p class="mt-1.5 border-t border-white/5 pt-1.5 text-[10px] text-[#FF9800]/50 sm:mt-2 sm:pt-2 sm:text-xs">{item.warning}</p>
 				</div>
 			{/each}
 		</div>
@@ -305,35 +305,35 @@
 </section>
 
 <!-- SODIUM -->
-<section id="sodium" class="flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="sodium" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="max-w-3xl text-center">
-		<span class="so-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#FF9800] uppercase">{d[7].tagline}</span>
-		<h2 class="so-ttl text-4xl font-bold text-white sm:text-5xl md:text-6xl">{d[7].title}</h2>
-		<p class="so-dsc mt-4 text-base text-white/40">{d[7].description}</p>
-		<div class="mt-10 flex w-full max-w-lg mx-auto flex-col gap-5">
+		<span class="so-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#FF9800] uppercase sm:mb-3">{d[7].tagline}</span>
+		<h2 class="so-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">{d[7].title}</h2>
+		<p class="so-dsc mt-2 text-sm text-white/40 sm:mt-4 sm:text-base">{d[7].description}</p>
+		<div class="mx-auto mt-6 flex w-full max-w-lg flex-col gap-4 sm:mt-10 sm:gap-5">
 			{#each d[7].levels as lv}
-				<div class="so-bar text-left"><div class="mb-1 flex justify-between"><span class="text-sm font-medium text-white/70">{lv.label}</span><span class="text-xs text-white/40">{lv.value}</span></div>
-				<div class="h-3 w-full overflow-hidden rounded-full bg-white/5"><div class="so-fill h-full rounded-full" style="background:{lv.color};width:{lv.color==='#4CAF50'?'15%':lv.color==='#81C784'?'30%':lv.color==='#FF9800'?'55%':'80%'}"></div></div></div>
+				<div class="so-bar text-left"><div class="mb-1 flex justify-between"><span class="text-xs font-medium text-white/70 sm:text-sm">{lv.label}</span><span class="text-[10px] text-white/40 sm:text-xs">{lv.value}</span></div>
+				<div class="h-2.5 w-full overflow-hidden rounded-full bg-white/5 sm:h-3"><div class="so-fill h-full rounded-full" style="background:{lv.color};width:{lv.color==='#4CAF50'?'15%':lv.color==='#81C784'?'30%':lv.color==='#FF9800'?'55%':'80%'}"></div></div></div>
 			{/each}
 		</div>
-		<p class="so-fn mt-6 text-xs text-white/20 italic leading-relaxed">{d[7].footnote}</p>
+		<p class="so-fn mt-4 text-[10px] text-white/20 italic leading-relaxed sm:mt-6 sm:text-xs">{d[7].footnote}</p>
 	</div>
 </section>
 
 <!-- CARBS -->
-<section id="carbs" class="flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="carbs" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="max-w-3xl text-center">
-		<span class="cb-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[8].tagline}</span>
-		<h2 class="cb-ttl text-4xl font-bold text-white sm:text-5xl">{d[8].title}</h2>
-		<p class="cb-dsc mt-4 text-base text-white/40">{d[8].description}</p>
-		<div class="mt-8 flex w-full flex-col gap-4">
+		<span class="cb-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[8].tagline}</span>
+		<h2 class="cb-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[8].title}</h2>
+		<p class="cb-dsc mt-2 text-sm text-white/40 sm:mt-4 sm:text-base">{d[8].description}</p>
+		<div class="mt-4 flex w-full flex-col gap-2.5 sm:mt-8 sm:gap-4">
 			{#each d[8].subsections as sub, i}
-				<div class="cb-b{i} rounded-xl border border-white/5 bg-white/[0.03] p-5 text-left">
-					<h3 class="text-base font-semibold text-white">{sub.name}</h3>
-					<p class="mt-1.5 text-sm leading-relaxed text-white/40">{sub.detail}</p>
-					<div class="mt-3 rounded-lg bg-[#4CAF50]/5 px-4 py-2"><p class="text-sm font-medium text-[#4CAF50]">{sub.rule}</p></div>
-					{#if sub.limit}<p class="mt-2 text-xs text-[#FF9800]/50">{sub.limit}</p>{/if}
-					{#if sub.tip}<p class="mt-1.5 text-xs text-[#2196F3]/50">Tip: {sub.tip}</p>{/if}
+				<div class="cb-b{i} rounded-xl border border-white/5 bg-white/[0.03] p-3.5 text-left sm:p-5">
+					<h3 class="text-sm font-semibold text-white sm:text-base">{sub.name}</h3>
+					<p class="mt-1 text-xs leading-relaxed text-white/40 sm:mt-1.5 sm:text-sm">{sub.detail}</p>
+					<div class="mt-2 rounded-lg bg-[#4CAF50]/5 px-3 py-1.5 sm:mt-3 sm:px-4 sm:py-2"><p class="text-xs font-medium text-[#4CAF50] sm:text-sm">{sub.rule}</p></div>
+					{#if sub.limit}<p class="mt-1.5 text-[10px] text-[#FF9800]/50 sm:mt-2 sm:text-xs">{sub.limit}</p>{/if}
+					{#if sub.tip}<p class="mt-1 text-[10px] text-[#2196F3]/50 sm:mt-1.5 sm:text-xs">Tip: {sub.tip}</p>{/if}
 				</div>
 			{/each}
 		</div>
@@ -341,62 +341,62 @@
 </section>
 
 <!-- FATS -->
-<section id="fats" class="flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="fats" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="max-w-3xl text-center">
-		<span class="ft-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#FF9800] uppercase">{d[9].tagline}</span>
-		<h2 class="ft-ttl text-4xl font-bold text-white sm:text-5xl">{d[9].title}</h2>
-		<p class="ft-dsc mt-4 text-base text-white/40">{d[9].description}</p>
-		<div class="mt-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
-			<div class="ft-gd rounded-xl border border-[#4CAF50]/10 bg-[#4CAF50]/5 p-5 text-left">
-				<h3 class="mb-3 text-xs font-bold tracking-wider text-[#4CAF50] uppercase">Priorizar</h3>
-				{#each d[9].good as g}<div class="mb-2 flex items-center gap-2"><div class="h-2 w-2 rounded-full bg-[#4CAF50]"></div><span class="text-sm text-white/60">{g}</span></div>{/each}
+		<span class="ft-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#FF9800] uppercase sm:mb-3">{d[9].tagline}</span>
+		<h2 class="ft-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[9].title}</h2>
+		<p class="ft-dsc mt-2 text-sm text-white/40 sm:mt-4 sm:text-base">{d[9].description}</p>
+		<div class="mt-4 grid w-full grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
+			<div class="ft-gd rounded-xl border border-[#4CAF50]/10 bg-[#4CAF50]/5 p-4 text-left sm:p-5">
+				<h3 class="mb-2 text-[10px] font-bold tracking-wider text-[#4CAF50] uppercase sm:mb-3 sm:text-xs">Priorizar</h3>
+				{#each d[9].good as g}<div class="mb-1.5 flex items-center gap-2 sm:mb-2"><div class="h-1.5 w-1.5 rounded-full bg-[#4CAF50] sm:h-2 sm:w-2"></div><span class="text-xs text-white/60 sm:text-sm">{g}</span></div>{/each}
 			</div>
-			<div class="ft-bd rounded-xl border border-red-500/10 bg-red-500/5 p-5 text-left">
-				<h3 class="mb-3 text-xs font-bold tracking-wider text-red-400 uppercase">Evitar frecuente</h3>
-				{#each d[9].bad as b}<div class="mb-2 flex items-center gap-2"><div class="h-2 w-2 rounded-full bg-red-400"></div><span class="text-sm text-white/60">{b}</span></div>{/each}
+			<div class="ft-bd rounded-xl border border-red-500/10 bg-red-500/5 p-4 text-left sm:p-5">
+				<h3 class="mb-2 text-[10px] font-bold tracking-wider text-red-400 uppercase sm:mb-3 sm:text-xs">Evitar frecuente</h3>
+				{#each d[9].bad as b}<div class="mb-1.5 flex items-center gap-2 sm:mb-2"><div class="h-1.5 w-1.5 rounded-full bg-red-400 sm:h-2 sm:w-2"></div><span class="text-xs text-white/60 sm:text-sm">{b}</span></div>{/each}
 			</div>
 		</div>
-		<div class="mt-5 flex justify-center gap-3">
-			{#each d[9].limits as l}<div class="ft-lm rounded-lg border border-white/5 bg-white/[0.03] px-4 py-2.5 text-center"><span class="text-xs font-bold uppercase" style="color:{l.color}">{l.type}</span><p class="mt-0.5 text-xs text-white/40">{l.limit}</p></div>{/each}
+		<div class="mt-3 flex flex-wrap justify-center gap-2 sm:mt-5 sm:gap-3">
+			{#each d[9].limits as l}<div class="ft-lm rounded-lg border border-white/5 bg-white/[0.03] px-3 py-2 text-center sm:px-4 sm:py-2.5"><span class="text-[10px] font-bold uppercase sm:text-xs" style="color:{l.color}">{l.type}</span><p class="mt-0.5 text-[10px] text-white/40 sm:text-xs">{l.limit}</p></div>{/each}
 		</div>
-		<p class="ft-fn mt-5 text-xs text-white/20 italic leading-relaxed">{d[9].footnote}</p>
+		<p class="ft-fn mt-3 text-[10px] text-white/20 italic leading-relaxed sm:mt-5 sm:text-xs">{d[9].footnote}</p>
 	</div>
 </section>
 
 <!-- CALORIES -->
-<section id="calories" class="flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="calories" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="max-w-3xl text-center">
-		<span class="cal-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[10].tagline}</span>
-		<h2 class="cal-ttl text-4xl font-bold text-white sm:text-5xl md:text-7xl">{d[10].title}</h2>
-		<p class="cal-dsc mt-6 max-w-xl mx-auto text-xl leading-relaxed text-white/40">{d[10].description}</p>
+		<span class="cal-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[10].tagline}</span>
+		<h2 class="cal-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-7xl">{d[10].title}</h2>
+		<p class="cal-dsc mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/40 sm:mt-6 sm:text-xl">{d[10].description}</p>
 	</div>
 </section>
 
 <!-- MACROS -->
-<section id="macros" class="flex h-screen items-center justify-center overflow-hidden px-6">
-	<div class="flex max-w-6xl flex-col items-center gap-8 md:flex-row">
-		<img src="/images/macros.jpg" alt="" class="ma-img h-60 w-60 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-80 sm:w-80" />
+<section id="macros" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
+	<div class="flex max-w-6xl flex-col items-center gap-5 sm:gap-8 md:flex-row">
+		<img src="/images/macros.jpg" alt="" class="ma-img h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-60 sm:w-60 md:h-80 md:w-80" />
 		<div class="text-center md:text-left">
-			<span class="ma-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[11].tagline}</span>
-			<h2 class="ma-ttl text-4xl font-bold text-white sm:text-5xl">{d[11].title}</h2>
-			<p class="ma-dsc mt-4 max-w-lg text-base leading-relaxed text-white/40">{d[11].description}</p>
-			<p class="ma-dt mt-4 max-w-lg text-sm leading-relaxed text-white/30">{d[11].detail}</p>
-			<div class="ma-ex mt-4 rounded-xl border border-white/5 bg-white/[0.03] px-5 py-4"><p class="text-sm leading-relaxed text-white/50">{d[11].example}</p></div>
+			<span class="ma-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[11].tagline}</span>
+			<h2 class="ma-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[11].title}</h2>
+			<p class="ma-dsc mt-2 max-w-lg text-sm leading-relaxed text-white/40 sm:mt-4 sm:text-base">{d[11].description}</p>
+			<p class="ma-dt mt-2 max-w-lg text-xs leading-relaxed text-white/30 sm:mt-4 sm:text-sm">{d[11].detail}</p>
+			<div class="ma-ex mt-3 rounded-xl border border-white/5 bg-white/[0.03] px-4 py-3 sm:mt-4 sm:px-5 sm:py-4"><p class="text-xs leading-relaxed text-white/50 sm:text-sm">{d[11].example}</p></div>
 		</div>
 	</div>
 </section>
 
 <!-- PORTIONS -->
-<section id="portions" class="flex h-screen items-center justify-center overflow-hidden px-6">
-	<div class="flex max-w-6xl flex-col items-center gap-8 md:flex-row-reverse">
-		<img src="/images/portions.jpg" alt="" class="po-img h-56 w-56 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-72 sm:w-72" />
+<section id="portions" class="flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
+	<div class="flex max-w-6xl flex-col items-center gap-5 sm:gap-8 md:flex-row-reverse">
+		<img src="/images/portions.jpg" alt="" class="po-img h-36 w-36 flex-shrink-0 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:h-56 sm:w-56 md:h-72 md:w-72" />
 		<div class="w-full max-w-xl">
-			<span class="po-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[12].tagline}</span>
-			<h2 class="po-ttl mb-8 text-4xl font-bold text-white sm:text-5xl">{d[12].title}</h2>
-			<div class="mb-2 grid grid-cols-4 gap-2 px-3 text-[10px] font-semibold tracking-[0.15em] text-white/25 uppercase"><span class="text-left">Grupo</span><span>Carbos</span><span>Proteina</span><span>Grasa</span></div>
+			<span class="po-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[12].tagline}</span>
+			<h2 class="po-ttl mb-4 text-3xl font-bold text-white sm:mb-8 sm:text-4xl md:text-5xl">{d[12].title}</h2>
+			<div class="mb-1.5 grid grid-cols-4 gap-1.5 px-2 text-[8px] font-semibold tracking-[0.15em] text-white/25 uppercase sm:mb-2 sm:gap-2 sm:px-3 sm:text-[10px]"><span class="text-left">Grupo</span><span>Carbos</span><span>Proteina</span><span>Grasa</span></div>
 			{#each d[12].items as item}
-				<div class="po-row mb-2 grid grid-cols-4 items-center gap-2 rounded-lg border border-white/5 bg-white/[0.03] px-3 py-3 text-sm transition-colors hover:bg-white/[0.05]">
-					<span class="flex items-center gap-2 text-left font-medium text-white"><span class="h-2.5 w-2.5 rounded-full" style="background:{item.color}"></span>{item.group}</span>
+				<div class="po-row mb-1.5 grid grid-cols-4 items-center gap-1.5 rounded-lg border border-white/5 bg-white/[0.03] px-2 py-2 text-xs transition-colors hover:bg-white/[0.05] sm:mb-2 sm:gap-2 sm:px-3 sm:py-3 sm:text-sm">
+					<span class="flex items-center gap-1.5 text-left font-medium text-white sm:gap-2"><span class="h-2 w-2 rounded-full sm:h-2.5 sm:w-2.5" style="background:{item.color}"></span>{item.group}</span>
 					<span class="text-[#4CAF50]">{item.carbs}</span>
 					<span class="text-[#2196F3]">{item.protein}</span>
 					<span class="text-[#FF9800]">{item.fat}</span>
@@ -407,47 +407,47 @@
 </section>
 
 <!-- PRACTICE -->
-<section id="practice" class="relative flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="practice" class="relative flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<div class="pointer-events-none absolute inset-0"><div class="absolute right-1/4 bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#4CAF50]/5 blur-[140px]"></div></div>
 	<div class="max-w-5xl text-center">
-		<span class="pr-tag mb-3 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase">{d[13].tagline}</span>
-		<h2 class="pr-ttl text-4xl font-bold text-white sm:text-5xl">{d[13].title}</h2>
-		<p class="pr-dsc mt-4 max-w-2xl mx-auto text-base text-white/40">{d[13].description}</p>
-		<div class="mt-8 flex w-full max-w-3xl mx-auto flex-col items-stretch gap-5 sm:flex-row">
-			<div class="pr-lb w-full rounded-xl border border-white/10 bg-white/[0.03] p-6">
-				<div class="mb-3 border-b border-white/10 pb-2"><h3 class="text-xl font-black text-white">Nutrition Facts</h3><p class="text-xs text-white/30">{d[13].example.servings} &middot; Serving size {d[13].example.serving}</p></div>
-				<div class="flex items-baseline justify-between border-b border-white/10 pb-2"><span class="text-sm font-bold text-white">Calories</span><span class="text-3xl font-black text-white">{d[13].example.calories}</span></div>
-				<div class="mt-2 space-y-1.5 text-sm">
+		<span class="pr-tag mb-2 inline-block text-xs font-semibold tracking-[0.3em] text-[#4CAF50] uppercase sm:mb-3">{d[13].tagline}</span>
+		<h2 class="pr-ttl text-3xl font-bold text-white sm:text-4xl md:text-5xl">{d[13].title}</h2>
+		<p class="pr-dsc mx-auto mt-2 max-w-2xl text-sm text-white/40 sm:mt-4 sm:text-base">{d[13].description}</p>
+		<div class="mx-auto mt-4 flex w-full max-w-3xl flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:gap-5">
+			<div class="pr-lb w-full rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-6">
+				<div class="mb-2 border-b border-white/10 pb-2 sm:mb-3"><h3 class="text-base font-black text-white sm:text-xl">Nutrition Facts</h3><p class="text-[10px] text-white/30 sm:text-xs">{d[13].example.servings} &middot; Serving size {d[13].example.serving}</p></div>
+				<div class="flex items-baseline justify-between border-b border-white/10 pb-2"><span class="text-xs font-bold text-white sm:text-sm">Calories</span><span class="text-2xl font-black text-white sm:text-3xl">{d[13].example.calories}</span></div>
+				<div class="mt-1.5 space-y-1 text-xs sm:mt-2 sm:space-y-1.5 sm:text-sm">
 					<div class="flex justify-between"><span class="text-white/50">Total Fat</span><span class="text-[#FF9800]">{d[13].example.fat}</span></div>
 					<div class="flex justify-between"><span class="text-white/50">Total Carbohydrate</span><span class="text-[#4CAF50]">{d[13].example.carbs}</span></div>
-					<div class="flex justify-between pl-3"><span class="text-xs text-white/30">Fiber</span><span class="text-xs text-white/40">{d[13].example.fiber}</span></div>
-					<div class="flex justify-between pl-3"><span class="text-xs text-white/30">Added Sugars</span><span class="text-xs text-red-400">{d[13].example.addedSugars}</span></div>
+					<div class="flex justify-between pl-2 sm:pl-3"><span class="text-[10px] text-white/30 sm:text-xs">Fiber</span><span class="text-[10px] text-white/40 sm:text-xs">{d[13].example.fiber}</span></div>
+					<div class="flex justify-between pl-2 sm:pl-3"><span class="text-[10px] text-white/30 sm:text-xs">Added Sugars</span><span class="text-[10px] text-red-400 sm:text-xs">{d[13].example.addedSugars}</span></div>
 					<div class="flex justify-between"><span class="text-white/50">Protein</span><span class="text-[#2196F3]">{d[13].example.protein}</span></div>
 				</div>
 			</div>
-			<div class="pr-cl w-full rounded-xl border border-[#4CAF50]/15 bg-[#4CAF50]/5 p-6 text-left">
-				<h4 class="mb-3 text-xs font-bold tracking-wider text-[#4CAF50] uppercase">Paso a paso</h4>
-				<ul class="space-y-2.5">
+			<div class="pr-cl w-full rounded-xl border border-[#4CAF50]/15 bg-[#4CAF50]/5 p-4 text-left sm:p-6">
+				<h4 class="mb-2 text-[10px] font-bold tracking-wider text-[#4CAF50] uppercase sm:mb-3 sm:text-xs">Paso a paso</h4>
+				<ul class="space-y-1.5 sm:space-y-2.5">
 					{#each d[13].example.calculation.steps as step}
-						<li class="flex items-start gap-2 text-sm leading-relaxed text-white/50"><span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#4CAF50]"></span>{step}</li>
+						<li class="flex items-start gap-2 text-xs leading-relaxed text-white/50 sm:text-sm"><span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#4CAF50]"></span>{step}</li>
 					{/each}
 				</ul>
-				<div class="mt-4 border-t border-[#4CAF50]/10 pt-3"><p class="text-sm font-medium text-[#4CAF50]">{d[13].example.calculation.result}</p></div>
+				<div class="mt-3 border-t border-[#4CAF50]/10 pt-2 sm:mt-4 sm:pt-3"><p class="text-xs font-medium text-[#4CAF50] sm:text-sm">{d[13].example.calculation.result}</p></div>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- CLOSING -->
-<section id="closing" class="relative flex h-screen items-center justify-center overflow-hidden px-6">
+<section id="closing" class="relative flex h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
 	<!-- bg from layout -->
 	<div class="pointer-events-none absolute inset-0"><div class="absolute top-1/2 left-1/2 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4CAF50]/5 blur-[180px]"></div></div>
 	<div class="max-w-4xl text-center">
-		<img src="/images/logo-sm.png" alt="Coach BattleBeast" class="cl-logo mx-auto mb-8 h-32 w-auto rounded-xl object-contain sm:h-40" />
-		<h2 class="cl-ttl text-5xl font-extrabold text-white sm:text-6xl md:text-7xl">{d[14].title}</h2>
-		<p class="cl-dsc mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white/40">{d[14].description}</p>
-		<p class="cl-hi mt-5 max-w-lg mx-auto text-base leading-relaxed text-white/50 italic">"{d[14].highlight}"</p>
-		<p class="cl-cta mt-8 inline-block rounded-xl bg-[#4CAF50]/10 px-8 py-5 text-lg font-semibold text-[#4CAF50]">{d[14].cta}</p>
-		<div class="cl-auth mt-14 flex flex-col items-center gap-1"><div class="mb-3 h-px w-16 bg-white/10"></div><span class="text-sm font-semibold tracking-wider text-white/60 uppercase">{d[14].author}</span><span class="text-xs text-white/30">{d[14].role}</span></div>
+		<img src="/images/logo-sm.png" alt="Coach BattleBeast" class="cl-logo mx-auto mb-5 h-24 w-auto rounded-xl object-contain sm:mb-8 sm:h-32 md:h-40" />
+		<h2 class="cl-ttl text-3xl font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl">{d[14].title}</h2>
+		<p class="cl-dsc mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/40 sm:mt-6 sm:text-lg">{d[14].description}</p>
+		<p class="cl-hi mx-auto mt-3 max-w-lg text-sm leading-relaxed text-white/50 italic sm:mt-5 sm:text-base">"{d[14].highlight}"</p>
+		<p class="cl-cta mt-5 inline-block rounded-xl bg-[#4CAF50]/10 px-6 py-4 text-base font-semibold text-[#4CAF50] sm:mt-8 sm:px-8 sm:py-5 sm:text-lg">{d[14].cta}</p>
+		<div class="cl-auth mt-8 flex flex-col items-center gap-1 sm:mt-14"><div class="mb-2 h-px w-12 bg-white/10 sm:mb-3 sm:w-16"></div><span class="text-xs font-semibold tracking-wider text-white/60 uppercase sm:text-sm">{d[14].author}</span><span class="text-[10px] text-white/30 sm:text-xs">{d[14].role}</span></div>
 	</div>
 </section>
